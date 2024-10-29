@@ -1,4 +1,4 @@
 package com.basicschrodobert.schordobert.controller;
 
-public class CharacterController {
+public class RpCharacterController {
 }

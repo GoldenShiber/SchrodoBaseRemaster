@@ -1,6 +1,6 @@
 package com.basicschrodobert.schordobert.exceptions;
 
-public class CharacterNotFoundException extends RuntimeException{
-    public CharacterNotFoundException(long id)
+public class RpCharacterNotFoundException extends RuntimeException{
+    public RpCharacterNotFoundException(long id)
     { super("Could not find the Character with the id " + id);}
 }
