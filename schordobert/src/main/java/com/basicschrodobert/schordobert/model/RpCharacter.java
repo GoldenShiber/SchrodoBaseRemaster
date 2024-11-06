@@ -2,22 +2,25 @@ package com.basicschrodobert.schordobert.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.Objects;
 
 @Entity
 public class RpCharacter {
-    private @Id @GeneratedValue long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    private String Name;
+    private String name;
     private long userId;
 
     public RpCharacter() {
     }
 
     public RpCharacter(String name, long userId) {
-        Name = name;
+        name = name;
         this.userId = userId;
     }
 
@@ -30,11 +33,11 @@ public class RpCharacter {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = this.name;
     }
 
     public long getUserId() {
@@ -50,11 +53,11 @@ public class RpCharacter {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RpCharacter character = (RpCharacter) o;
-        return id == character.id && userId == character.userId && Objects.equals(Name, character.Name);
+        return id == character.id && userId == character.userId && Objects.equals(name, character.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, Name, userId);
+        return Objects.hash(id, name, userId);
     }
 }
