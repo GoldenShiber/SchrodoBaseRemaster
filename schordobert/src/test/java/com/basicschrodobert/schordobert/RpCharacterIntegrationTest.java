@@ -17,7 +17,7 @@ import com.basicschrodobert.schordobert.config.CharacterJpaConfig;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = {SchordobertApplication.class, CharacterJpaConfig.class})
 @Sql(scripts = {"/character_schema.sql"}, executionPhase = BEFORE_TEST_CLASS)
-public class SpringBootH2IntegrationTest {
+public class RpCharacterIntegrationTest {
 
     @Autowired
     private RpCharacterRepository rpCharacterRepository;
