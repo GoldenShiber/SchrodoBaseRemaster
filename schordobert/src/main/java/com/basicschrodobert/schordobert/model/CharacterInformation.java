@@ -3,6 +3,7 @@ package com.basicschrodobert.schordobert.model;
 import com.basicschrodobert.schordobert.races.Race;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import java.util.Random;
 
 @Entity
 public class CharacterInformation {
@@ -39,6 +40,14 @@ public class CharacterInformation {
         return weight;
     }
 
+    public CharacterInformation(){
+        Random rd = new Random();
+        this.charId = rd.nextLong();
+        this.race = Race.UNKNOWN;
+        this.age = 1;
+        this.height =1;
+        this.weight =1;
+    }
 
     private CharacterInformation(CharacterInformationBuilder builder){
         this.charId = builder.charId;
