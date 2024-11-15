@@ -20,7 +20,7 @@ public class RpCharacter {
     }
 
     public RpCharacter(String name, long userId) {
-        name = name;
+        this.name = name;
         this.userId = userId;
     }
 
@@ -37,7 +37,7 @@ public class RpCharacter {
     }
 
     public void setName(String name) {
-        name = this.name;
+        this.name = name;
     }
 
     public long getUserId() {
