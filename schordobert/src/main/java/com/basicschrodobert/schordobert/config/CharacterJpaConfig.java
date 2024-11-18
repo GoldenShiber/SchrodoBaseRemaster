@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class CharacterJpaConfig {
 
+    // Check this as potential reference https://docs.spring.io/spring-data/jpa/reference/repositories/create-instances.html
+
     /*
 
     @Autowired
